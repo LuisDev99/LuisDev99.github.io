@@ -1,0 +1,49 @@
+.prompt {
+  box-shadow: 0 20px 68px rgba(0, 0, 0, 0.55);
+  background-color: #151718;
+  width: 80%;
+}
+
+.prompt-text-area {
+  font-family: Hack, monospace;
+}
+
+.prompt-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: flicker 0.5s infinite;
+  margin-bottom: 4px;
+}
+
+.prompt-text-input p {
+  font-weight: 800;
+  font-size: 20px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 170px;
+  animation: typing 3s steps(60, end) forwards;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* Define the keyframes for the cursor animation */
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
