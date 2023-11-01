@@ -3,12 +3,14 @@ import CursorSVG from "@/assets/icons/cursor-svg";
 import "./prompt.css";
 import WindowsControls from "@/assets/icons/windows-controls";
 
-const message = `Hey there! Welcome 👋 I'm Luis Ponce, a Full-Stack Software Engineer 🧑‍💻 
+const message = `Hey there! Welcome to my portfolio 👋 I'm Luis Ponce, a Full-Stack Software Engineer 🧑‍💻 
 
 Take a peek 👇 at some of my work! (Prepare your astronaout suit)
   
-Enjoy the ride! 🚀
-`;
+Enjoy the ride! 🚀`;
+
+const introductionDelay = 3000;
+const typingSpeed = 25;
 
 export default function AIPrompt() {
   const [displayResponse, setDisplayResponse] = useState("");
@@ -28,10 +30,10 @@ export default function AIPrompt() {
           clearInterval(intervalId);
           setShowBtn(true);
         }
-      }, 30);
+      }, typingSpeed);
 
       return () => clearInterval(intervalId);
-    }, 3000);
+    }, introductionDelay);
 
     return () => clearTimeout(timer);
   }, []);
@@ -45,9 +47,7 @@ export default function AIPrompt() {
       <div className="prompt-text-area mt-12">
         <div className="prompt-text-input">
           <p>
-            &gt; <Method text="Introduce" />(
-            <Parameter text="Name" /> = &quot;Luis Ponce&quot;,{" "}
-            <Parameter text="IsFullStack" /> = true)
+            &gt; <Method text="Write" /> a short introduction about myself
           </p>{" "}
         </div>
 
@@ -58,7 +58,7 @@ export default function AIPrompt() {
         </div>
 
         {shouldShowBtn && (
-          <div className="text-[#4E9A06] flex w-full items-center justify-center mt-32 cursor-pointer">
+          <div className="text-[#4E9A06] mt-32 flex w-full items-center justify-center underline cursor-pointer">
             Jump to projects 💼
           </div>
         )}

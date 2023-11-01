@@ -1,7 +1,10 @@
 "use client";
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
-import AIPrompt from "@/components/prompt";
+import AIPrompt from "@/components/prompt/prompt";
+import Carousel from "@/components/carousel/carousel";
+
+import Astronaut from "../assets/astronaut.gif";
 
 // Little helpers ...
 const url = (name: string, wrap = false) =>
@@ -38,13 +41,25 @@ export default function App() {
         {/* Floating images */}
         <ParallaxLayer
           speed={1}
-          sticky={{ start: 0.7, end: 2.5 }}
+          sticky={{ start: 2, end: 3 }}
           style={{ pointerEvents: "none" }}
         >
           <img
             alt=""
             src={url("satellite4")}
-            style={{ width: "15%", marginLeft: "70%" }}
+            style={{ width: "15%", marginLeft: "80%" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          speed={1}
+          sticky={{ start: 0.7, end: 2.5 }}
+          style={{ pointerEvents: "none" }}
+        >
+          <img
+            alt=""
+            src={Astronaut.src}
+            style={{ width: "15%", marginLeft: "5%" }}
           />
         </ParallaxLayer>
 
@@ -75,16 +90,6 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-            backgroundImage: url("clients", true),
-          }}
-        />
-
-        <ParallaxLayer
           offset={2.5}
           speed={1}
           style={{
@@ -105,9 +110,24 @@ export default function App() {
             marginTop: "5%",
             justifyContent: "center",
           }}
-          onClick={() => parallax.current.scrollTo(2)}
+          onClick={() => parallax.current.scrollTo(1)}
         >
           <AIPrompt />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
+          speed={0.1}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "70%",
+            height: "30%",
+            margin: "0 auto",
+          }}
+        >
+          <Carousel />
         </ParallaxLayer>
 
         <ParallaxLayer
