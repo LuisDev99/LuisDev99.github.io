@@ -44,15 +44,15 @@ export default function AIPrompt() {
         <WindowsControls />
       </div>
 
-      <div className="prompt-text-area mt-12">
+      <div className="prompt-text-area mt-12 p-4">
         <div className="prompt-text-input">
-          <p>
+          <p className="whitespace-pre-wrap md:whitespace-nowrap">
             &gt; <Method text="Write" /> a short introduction about myself
           </p>{" "}
         </div>
 
         <div className="prompt-text-response mt-12 p-2">
-          <pre>
+          <pre className="whitespace-pre-wrap">
             {displayResponse} {<CursorSVG />}
           </pre>
         </div>

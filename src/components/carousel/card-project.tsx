@@ -7,7 +7,7 @@ interface CardProject {
 
 export default function CardProject({ project }: CardProject) {
   return (
-    <div className="m-auto h-[600px] mt-[10%] w-[80%] bg-[#151718] flex items-center justify-center rounded-lg">
+    <div className="m-auto h-[600px] mt-[10%] w-[80%] bg-[#151718] flex flex-col md:flex-row items-center justify-center rounded-lg">
       <div className="w-full m-auto">
         <img className="rounded-t-lg" src={project.imgUrl} alt="" />
       </div>

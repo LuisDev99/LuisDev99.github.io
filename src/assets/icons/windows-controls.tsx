@@ -1,9 +1,16 @@
-export default function WindowsControls() {
+interface WindowsControlsProps {
+  width?: string;
+  height?: string;
+}
+export default function WindowsControls({
+  height,
+  width,
+}: WindowsControlsProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="54"
-      height="14"
+      width={width ?? "54"}
+      height={height ?? "14"}
       viewBox="0 0 54 14"
     >
       <g fill="none" fillRule="evenodd" transform="translate(1 1)">
