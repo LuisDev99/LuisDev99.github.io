@@ -212,6 +212,17 @@ export default function App() {
                   />
                 </Link>
               </div>
+
+              <div className="mt-8 flex items-center justify-center">
+                <Link
+                  href="/resume/luis_ponce_resume.pdf"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="underline"
+                >
+                  or download my resume
+                </Link>
+              </div>
             </div>
           </div>
         </ParallaxLayer>
