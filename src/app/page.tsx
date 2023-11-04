@@ -5,6 +5,9 @@ import AIPrompt from "@/components/prompt/prompt";
 import Carousel from "@/components/carousel/carousel";
 
 import Astronaut from "../assets/astronaut.gif";
+import Experience from "@/components/experience/experience";
+import DragableSkill from "@/components/dragable-skill/dragable-skill";
+import Link from "next/link";
 
 // Little helpers ...
 const url = (name: string, wrap = false) =>
@@ -18,7 +21,32 @@ export default function App() {
   const parallax = useRef<IParallax>(null!);
   return (
     <div style={{ width: "100%", height: "100%", background: "#253237" }}>
-      <Parallax ref={parallax} pages={3}>
+      <Parallax ref={parallax} pages={4}>
+        {/* Steppers */}
+        {/* <ParallaxLayer
+          speed={1}
+          sticky={{ start: 0.5, end: 0.9 }}
+          style={{ pointerEvents: "none" }}
+        >
+          Introduction
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          speed={1}
+          sticky={{ start: 1.5, end: 1.9 }}
+          style={{ pointerEvents: "none" }}
+        >
+          Projects
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          speed={1}
+          sticky={{ start: 2.5, end: 2.9 }}
+          style={{ pointerEvents: "none" }}
+        >
+          Experience
+        </ParallaxLayer> */}
+
         {/* Backgrounds */}
         <ParallaxLayer
           offset={0}
@@ -38,10 +66,19 @@ export default function App() {
           }}
         />
 
+        <ParallaxLayer
+          offset={3}
+          speed={1}
+          style={{
+            backgroundImage: url("stars", true),
+            backgroundSize: "cover",
+          }}
+        />
+
         {/* Floating images */}
         <ParallaxLayer
           speed={1}
-          sticky={{ start: 2, end: 3 }}
+          sticky={{ start: 2, end: 2.9 }}
           style={{ pointerEvents: "none" }}
         >
           <img
@@ -77,7 +114,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2.5}
+          offset={2.8}
           speed={-0.4}
           style={{
             display: "flex",
@@ -86,19 +123,8 @@ export default function App() {
             pointerEvents: "none",
           }}
         >
-          <img alt="" src={url("server")} style={{ width: "20%" }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2.5}
-          speed={1}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img alt="" src={url("earth")} style={{ width: "60%" }} />
+          {/* <img alt="" src={url("server")} style={{ width: "20%" }} /> */}
+          {/* <img alt="" src={url("earth")} style={{ width: "60%" }} /> */}
         </ParallaxLayer>
 
         {/* Main Content  */}
@@ -139,7 +165,55 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <img alt="" src={url("clients-main")} style={{ width: "40%" }} />
+          <Experience />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={-0}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div className="w-full h-full flex items-center justify-center">
+            <img src="/gifs/space_threeD.gif" alt="" className="" />
+
+            <div>
+              <p>
+                That&apos;s it! Looks like you have reach the end of the space
+                journey!{" "}
+              </p>
+              <br />
+              <p>For further exploration, you can visit my socials: </p>
+
+              <div className="flex mt-8 items-center justify-center">
+                <Link
+                  href="https://www.linkedin.com/in/luis-gerardo-ponce-rodriguez-1277a5140/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src="/socials/linkedin.png"
+                    alt="NO HAY "
+                    className="w-7 h-7"
+                  />
+                </Link>
+                <Link
+                  href="https://github.com/LuisDev99"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src="/socials/github.png"
+                    alt="NO HAY "
+                    className="w-7 h-7 ml-3"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div>

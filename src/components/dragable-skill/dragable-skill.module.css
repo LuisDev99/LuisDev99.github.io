@@ -1,0 +1,15 @@
+.rocket {
+  background-size: contain;
+  width: 72px;
+  height: 72px;
+  cursor: -webkit-grab;
+  will-change: transform;
+  user-select: none;
+  stroke: aqua;
+  fill: blue;
+  background-color: white;
+}
+
+.rocket:active {
+  cursor: -webkit-grabbing;
+}

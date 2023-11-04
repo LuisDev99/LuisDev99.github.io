@@ -5,7 +5,9 @@ import WindowsControls from "@/assets/icons/windows-controls";
 
 const message = `Hey there! Welcome to my portfolio 👋 I'm Luis Ponce, a Full-Stack Software Engineer 🧑‍💻 
 
-Take a peek 👇 at some of my work! (Prepare your astronaout suit)
+It looks like it's just you floating in space 🧑‍🚀 and somehow found my portfolio! 
+
+Explore some of my work below 👇 that I've prepared for you! 
   
 Enjoy the ride! 🚀`;
 
@@ -40,8 +42,14 @@ export default function AIPrompt() {
 
   return (
     <div className="prompt p-4 rounded-md h-[80%]">
-      <div>
-        <WindowsControls />
+      <div className="flex items-center">
+        <div className="mr-auto">
+          <WindowsControls />
+        </div>
+        <div className="mr-auto flex items-center">
+          <img src="/mac-folder.png" width={24} height={24} alt="" />{" "}
+          <p className="ml-2">luisgpt</p>
+        </div>
       </div>
 
       <div className="prompt-text-area mt-12 p-4">
