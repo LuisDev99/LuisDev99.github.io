@@ -41,7 +41,7 @@ export default function AIPrompt() {
   }, []);
 
   return (
-    <div className="prompt p-4 rounded-md h-[80%]">
+    <div className="prompt p-4 rounded-md h-full md:h-[80%]">
       <div className="flex items-center">
         <div className="mr-auto">
           <WindowsControls />

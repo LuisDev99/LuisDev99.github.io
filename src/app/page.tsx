@@ -1,15 +1,12 @@
 "use client";
+import Link from "next/link";
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
+
 import AIPrompt from "@/components/prompt/prompt";
 import Carousel from "@/components/carousel/carousel";
-
-import Astronaut from "../assets/astronaut.gif";
 import Experience from "@/components/experience/experience";
-import DragableSkill from "@/components/dragable-skill/dragable-skill";
-import Link from "next/link";
 
-// Little helpers ...
 const url = (name: string, wrap = false) =>
   `${
     wrap ? "url(" : ""
@@ -95,8 +92,8 @@ export default function App() {
         >
           <img
             alt=""
-            src={Astronaut.src}
-            style={{ width: "15%", marginLeft: "5%" }}
+            src="/gifs/astronaut.gif"
+            className="w-[40%] md:w-[15%] ml-1 md:ml-[5%]"
           />
         </ParallaxLayer>
 
@@ -113,7 +110,7 @@ export default function App() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
+        {/* <ParallaxLayer
           offset={2.8}
           speed={-0.4}
           style={{
@@ -123,9 +120,9 @@ export default function App() {
             pointerEvents: "none",
           }}
         >
-          {/* <img alt="" src={url("server")} style={{ width: "20%" }} /> */}
-          {/* <img alt="" src={url("earth")} style={{ width: "60%" }} /> */}
-        </ParallaxLayer>
+          <img alt="" src={url("server")} style={{ width: "20%" }} />
+          <img alt="" src={url("earth")} style={{ width: "60%" }} />
+        </ParallaxLayer> */}
 
         {/* Main Content  */}
         <ParallaxLayer
@@ -177,13 +174,13 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="w-full h-full flex items-center justify-center flex-wrap p-3">
             <img src="/gifs/space_threeD.gif" alt="" className="" />
 
             <div>
               <p>
                 That&apos;s it! Looks like you have reach the end of the space
-                journey!{" "}
+                journey 🥳
               </p>
               <br />
               <p>For further exploration, you can visit my socials: </p>

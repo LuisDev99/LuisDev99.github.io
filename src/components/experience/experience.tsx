@@ -5,8 +5,8 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <div className="w-full h-full flex">
-      <div className="w-[60%] flex flex-col items-center overflow-auto">
+    <div className="w-full h-full flex items-center justify-center">
+      <div className="w-[60%] flex-col items-center overflow-auto hidden md:flex">
         {SKILLS.map((skill, idx) => (
           <DragableSkill key={idx} imgUrl={skill} />
         ))}
@@ -16,7 +16,7 @@ export default function Experience() {
           return (
             <div
               key={idx}
-              className="bg-transparent flex p-4 w-[70%] min-h-[180px] hover:bg-[#1E293B80] hover:opacity-[100] rounded-2xl  mt-8 text-white"
+              className="bg-transparent flex p-4 w-full md:w-[70%]  min-h-[180px] hover:bg-[#1E293B80] hover:opacity-[100] rounded-2xl  mt-8 text-white"
             >
               <div className="w-[20%] text-right">
                 <p className="text-[#94A3B8BF]">{experience.workedDate}</p>{" "}
