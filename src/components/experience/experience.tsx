@@ -1,15 +1,20 @@
-import WindowsControls from "@/assets/icons/windows-controls";
 import { SKILLS, WORK_EXPERIENCE } from "@/utilities/experience";
-import DragableSkill from "@/components/dragable-skill/dragable-skill";
 import React from "react";
+import ProgressBar from "./progress-bar";
 
 export default function Experience() {
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div className="w-[60%] flex-col items-center overflow-auto hidden md:flex">
-        {SKILLS.map((skill, idx) => (
-          <DragableSkill key={idx} imgUrl={skill} />
-        ))}
+      <div className="w-full hidden md:block">
+        <div className="w-[60%] h-full flex flex-col m-auto">
+          {SKILLS.map((skill, idx) => (
+            <ProgressBar
+              key={idx}
+              title={skill.title}
+              amount={skill.expertise}
+            />
+          ))}
+        </div>
       </div>
       <div className="w-full">
         {WORK_EXPERIENCE.map((experience, idx) => {

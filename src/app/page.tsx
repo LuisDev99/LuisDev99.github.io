@@ -20,10 +20,10 @@ export default function App() {
     <div style={{ width: "100%", height: "100%", background: "#253237" }}>
       <Parallax ref={parallax} pages={4}>
         {/* Steppers */}
-        {/* <ParallaxLayer
+        <ParallaxLayer
           speed={1}
           sticky={{ start: 0.5, end: 0.9 }}
-          style={{ pointerEvents: "none" }}
+          className="pointer-events-none ml-3 [writing-mode:vertical-lr]"
         >
           Introduction
         </ParallaxLayer>
@@ -31,7 +31,7 @@ export default function App() {
         <ParallaxLayer
           speed={1}
           sticky={{ start: 1.5, end: 1.9 }}
-          style={{ pointerEvents: "none" }}
+          className="pointer-events-none ml-3 [writing-mode:vertical-lr]"
         >
           Projects
         </ParallaxLayer>
@@ -39,10 +39,10 @@ export default function App() {
         <ParallaxLayer
           speed={1}
           sticky={{ start: 2.5, end: 2.9 }}
-          style={{ pointerEvents: "none" }}
+          className="pointer-events-none ml-3 [writing-mode:vertical-lr]"
         >
           Experience
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
         {/* Backgrounds */}
         <ParallaxLayer
@@ -87,7 +87,7 @@ export default function App() {
 
         <ParallaxLayer
           speed={1}
-          sticky={{ start: 0.7, end: 2.5 }}
+          sticky={{ start: 0.7, end: 1.9 }}
           style={{ pointerEvents: "none" }}
         >
           <img
@@ -110,9 +110,9 @@ export default function App() {
           />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer
-          offset={2.8}
-          speed={-0.4}
+        <ParallaxLayer
+          offset={3.9}
+          speed={-0.1}
           style={{
             display: "flex",
             alignItems: "center",
@@ -120,9 +120,8 @@ export default function App() {
             pointerEvents: "none",
           }}
         >
-          <img alt="" src={url("server")} style={{ width: "20%" }} />
           <img alt="" src={url("earth")} style={{ width: "60%" }} />
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
         {/* Main Content  */}
         <ParallaxLayer
@@ -174,7 +173,7 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <div className="w-full h-full flex items-center justify-center flex-wrap p-3">
+          <div className="w-full h-full flex items-center justify-center flex-wrap p-4">
             <img src="/gifs/space_threeD.gif" alt="" className="" />
 
             <div>
@@ -204,6 +203,17 @@ export default function App() {
                 >
                   <img
                     src="/socials/github.png"
+                    alt="NO HAY "
+                    className="w-7 h-7 ml-3"
+                  />
+                </Link>
+                <Link
+                  href="mailto: luisgpr99@gmail.com?subject = Reaching Luis Ponce from space&body = <Your message to me>"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src="/socials/email.png"
                     alt="NO HAY "
                     className="w-7 h-7 ml-3"
                   />

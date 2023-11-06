@@ -6,6 +6,11 @@ export interface Experience {
   skills: string[];
 }
 
+export interface Skill {
+  title: string;
+  expertise: number;
+}
+
 export const WORK_EXPERIENCE: Experience[] = [
   {
     title: "Fullstack Developer - Acklen Avenue",
@@ -39,17 +44,16 @@ export const WORK_EXPERIENCE: Experience[] = [
   },
 ];
 
-export const SKILLS: string[] = [
-  "angular",
-  "figma",
-  "graphql",
-  "javascript",
-  "mysql",
-  "nextjs",
-  "nodejs",
-  "postgresql",
-  "react",
-  "salesforce",
-  "typescript",
-  "csharp",
-].map((skill) => `/skills/${skill}.svg`);
+export const SKILLS: Skill[] = [
+  { title: "Angular", expertise: 85 },
+  { title: "Figma", expertise: 90 },
+  { title: "GraphQL", expertise: 85 },
+  { title: "MySQL", expertise: 85 },
+  { title: "NextJS", expertise: 90 },
+  { title: "NodeJS/NestJS", expertise: 93 },
+  { title: "PostgreSQL", expertise: 89 },
+  { title: "ReactJS", expertise: 95 },
+  { title: "Salesforce", expertise: 80 },
+  { title: "Javascript/Typescript", expertise: 95 },
+  { title: "C#/.Net Core", expertise: 92 },
+].sort((a, b) => b.expertise - a.expertise);
