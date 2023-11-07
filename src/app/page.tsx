@@ -110,8 +110,8 @@ export default function App() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={3.9}
+        {/* <ParallaxLayer
+          offset={4}
           speed={-0.1}
           style={{
             display: "flex",
@@ -121,7 +121,7 @@ export default function App() {
           }}
         >
           <img alt="" src={url("earth")} style={{ width: "60%" }} />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         {/* Main Content  */}
         <ParallaxLayer
@@ -166,7 +166,7 @@ export default function App() {
 
         <ParallaxLayer
           offset={3}
-          speed={-0}
+          speed={-0.1}
           style={{
             display: "flex",
             alignItems: "center",
