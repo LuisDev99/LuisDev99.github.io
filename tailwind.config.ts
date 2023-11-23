@@ -17,5 +17,6 @@ const config: Config = withMT({
     },
   },
   plugins: [],
+  darkMode: "class",
 });
 export default config;

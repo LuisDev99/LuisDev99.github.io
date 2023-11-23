@@ -21,6 +21,7 @@ export default function WindowsControls({
           fill="#FF5F56"
           stroke="#E0443E"
           strokeWidth=".5"
+          className="cursor-pointer"
         ></circle>
         <circle
           cx="26"
@@ -29,6 +30,7 @@ export default function WindowsControls({
           fill="#FFBD2E"
           stroke="#DEA123"
           strokeWidth=".5"
+          className="cursor-pointer"
         ></circle>
         <circle
           cx="46"
@@ -37,6 +39,7 @@ export default function WindowsControls({
           fill="#27C93F"
           stroke="#1AAB29"
           strokeWidth=".5"
+          className="cursor-pointer"
         ></circle>
       </g>
     </svg>

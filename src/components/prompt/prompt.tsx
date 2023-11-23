@@ -48,11 +48,11 @@ export default function AIPrompt() {
         </div>
         <div className="mr-auto flex items-center">
           <img src="/mac-folder.png" width={24} height={24} alt="" />{" "}
-          <p className="ml-2">luisgpt</p>
+          <p className="ml-2 text-white">luisgpt</p>
         </div>
       </div>
 
-      <div className="prompt-text-area mt-12 p-4">
+      <div className="prompt-text-area mt-12 p-4 text-white">
         <div className="prompt-text-input">
           <p className="whitespace-pre-wrap md:whitespace-nowrap">
             &gt; <Method text="Write" /> a short introduction about myself
