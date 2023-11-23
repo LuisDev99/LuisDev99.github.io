@@ -75,10 +75,6 @@ export default function AIPrompt() {
   );
 }
 
-const Parameter = ({ text }: { text: string }) => {
-  return <span className="text-[#55b5db]">{text}</span>;
-};
-
 const Method = ({ text }: { text: string }) => {
   return <span className="text-[#e6cd69]">{text}</span>;
 };
