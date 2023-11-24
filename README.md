@@ -17,15 +17,12 @@ I'm Luis Ponce, a Full Stack Developer exploring the realms of web development �
 - GraphQL
 - PostgreSQL/MySQL
 
-🌌 **What You'll Find Here**  
-Dive into this celestial repository to explore my stellar collection of projects powered by extra-terrestial tech.
-
 🚀 **My Mission**  
-My mission is to build digital wonders that inspire, innovate, and elevate user experiences. Through code, creativity, and a cosmic touch, I aim to propel technology into new frontiers.
+My mission is to build digital wonders that inspire, innovate, elevate user experiences and make clients happy. Through code, creativity, leadership, and a cosmic touch, I aim to achieve client satisfaction and team success.
 
 🌠 **Let's Connect!**
 
-- Explore my code constellations below! 👇
+- Explore my code on my [Github](https://github.com/LuisDev99)! 👇
 - Reach out to me on [LinkedIn](https://www.linkedin.com/in/luis-gerardo-ponce-rodriguez-1277a5140/) for cosmic collaborations!
 
 🛸 **Thanks for visiting my cosmic hub! Enjoy the journey!** 🌌
